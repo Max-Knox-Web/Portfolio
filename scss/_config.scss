@@ -1,17 +1,38 @@
 $primary-color: #444;
-$secondary-color: #eece1a;
+$secondary-color: #82ccdd;
 $show-home-image: true;
 $home-image: url(../img/bg.jpg);
-$background-opacity: 0.6;
+$background-opacity: 0;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
+@mixin bgGradient {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(156, 252, 248, 1) 11.2%,
+    rgba(110, 123, 251, 1) 91.1%
+  );
+}
+
+@mixin bgGradient2 {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(110, 123, 251, 1) 11.2%,
+    rgba(156, 252, 248, 1) 91.1%
+  );
+}
+
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
+      //background: $home-image;
+      background-image: linear-gradient(
+        180.2deg,
+        rgba(30, 33, 48, 1) 6.8%,
+        rgba(74, 98, 110, 1) 131%
+      );
       background-attachment: fixed;
       background-size: cover;
 

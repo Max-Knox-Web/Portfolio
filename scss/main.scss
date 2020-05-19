@@ -27,12 +27,25 @@ h3 {
   }
 
   &.sm-heading {
+    font-size: 2rem;
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    padding: 0.2rem 0.4rem;
+    color: $secondary-color;
+    //background: rgba(lighten($primary-color, 2), 0.1);
   }
 }
 
+//Blinking Cursor effect
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.txt-type > .txt {
+  border-right: 0.2rem solid $secondary-color;
+  animation: blink 0.5s step-end infinite alternate;
+}
+// end cursor  effect
 a {
   color: set-text-color($primary-color);
   text-decoration: none;
@@ -105,7 +118,7 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: #1e2130;
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
@@ -123,12 +136,14 @@ main {
     border: 3px #fff solid;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.1;
       border-color: $secondary-color;
       @include easeOut;
     }
   }
 }
+
+//Projects pages
 
 //Contact Page
 
@@ -150,6 +165,7 @@ main {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
+      cursor: pointer;
       span {
         color: set-text-color($secondary-color);
       }
@@ -186,7 +202,7 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
+  background: #1e2130;
   color: set-text-color($primary-color);
   height: 60px;
 }
